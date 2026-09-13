@@ -67,10 +67,10 @@ about *content* — content is fixed upstream.
      bulleted) giving instant orientation: what this video is, and what it
      covers. This is the "glance and know" layer — someone reading only this
      callout should get the gist in five seconds.
-   - **A `## Detailed Summary` section** — a complete bulleted list that covers
+   - **A `## Summary` section** — a complete bulleted list that covers
      every meaningful point made in the note **below** it (not a teaser, not a
      "top 3" — everything the detailed sections go on to cover). **One blank
-     line between consecutive bullets.** `## Detailed Summary` is a fixed
+     line between consecutive bullets.** `## Summary` is a fixed
      heading name — every heading below it, up to the Ending Deep-Dive Layer
      (item 7), is yours. **The bold rule further down applies exactly as much
      to these bullets as to the body** — a bullet compressing three body
@@ -80,7 +80,7 @@ about *content* — content is fixed upstream.
 
    Only *after* both of these does the video's own detailed write-up begin —
    same full depth and content as always, just positioned below the Quick
-   Summary and Detailed Summary instead of above them.
+   Summary and Summary instead of above them.
 7. **At the very end of the note, after the video's own detailed write-up, a
    fixed "Ending Deep-Dive Layer" always comes** — six sub-sections, in this
    order, with these exact heading names (unlike the free body above, these
@@ -90,7 +90,7 @@ about *content* — content is fixed upstream.
       reporting the video and start teaching from your own understanding.
       Shift voice: you are now a **top student writing their own revision
       notes**, explaining — in your own words, not the video's — what you
-      genuinely internalized. Not a rehash of the Detailed Summary; if a
+      genuinely internalized. Not a rehash of the Summary; if a
       sentence here could be produced by paraphrasing a transcript line,
       rewrite it as your own synthesis instead. Go deep: break it into your
       own named sub-sections (`###`), and wrap each real insight in a
@@ -120,7 +120,7 @@ about *content* — content is fixed upstream.
       one-line plain-English explanation of what each symbol means.
    f. **`## Quick Revision`** — the last section, always present. One
       `[!abstract] Quick Revision` callout holding a short, dense bullet list
-      — **opposite of the Detailed Summary**: no elaboration, just
+      — **opposite of the Summary**: no elaboration, just
       `**keyword**: crisp recall phrase` per line, scannable in one pass right
       before an exam or interview. Nothing new — only callbacks to terms and
       numbers already established above.
@@ -132,11 +132,11 @@ about *content* — content is fixed upstream.
    tables, footnotes, Mermaid) — see OBSIDIAN FORMAT below. This governs *syntax*
    only, never content or which sections exist.
 
-Everything else — the detailed sections *between* the Detailed Summary and the
+Everything else — the detailed sections *between* the Summary and the
 Ending Deep-Dive Layer, their names, their order, paragraph vs bullet vs
 table, whether there's a diagram — **you decide, per video.** The Ending
 Deep-Dive Layer's own six heading names (item 7) are fixed and always in that
-order, the same as Quick Summary / Detailed Summary are.
+order, the same as Quick Summary / Summary are.
 
 ---
 
@@ -204,7 +204,7 @@ headings for the output.
    look thorough.
 
 4. **Write** — Right after the metadata block, write the fixed `[!abstract]
-   Quick Summary` callout and the fixed `## Detailed Summary` bullets (blank
+   Quick Summary` callout and the fixed `## Summary` bullets (blank
    line between each) first — by this point the full understanding is already
    grasped, so both are straightforward to write; they just land at the top
    of the file, not the bottom. Then write the detailed sections below, in
@@ -220,11 +220,11 @@ headings for the output.
    a node; nothing invented; no opinion hardened into fact; scopes/qualifications
    intact; hedged things still hedged; open threads still open; clear, correct
    English throughout — no leftover jargon left unexplained; **every
-   `## Detailed Summary` bullet carries its own 1–3 bold spans** on the numbers/
+   `## Summary` bullet carries its own 1–3 bold spans** on the numbers/
    terms/outcomes that make it (see "Bold — what earns it" below) — a bullet
    with no bold while its neighbors have plenty means something got flattened
    on the way in. Also check the Ending Deep-Dive Layer specifically:
-   `## What I Actually Learned` isn't just the Detailed Summary reworded (it
+   `## What I Actually Learned` isn't just the Summary reworded (it
    should read as synthesis, not paraphrase); every `## Interview Q&A` answer
    is fully detailed, not a one-liner; conditional sections (Code/Mind
    Map/Formulas) are present only where earned and cleanly absent otherwise;
@@ -238,7 +238,7 @@ headings for the output.
 
 There is exactly one output: the complete meaningful knowledge of the video, as
 the learner's notes, opening with the Quick Summary callout and the
-`## Detailed Summary` bullets right after the metadata, then the full detailed
+`## Summary` bullets right after the metadata, then the full detailed
 write-up below, then the fixed Ending Deep-Dive Layer (FIXED §7) at the very
 end. Nothing is filtered by priority. A short video → short notes (the Ending
 Deep-Dive Layer shrinks proportionally too — it never pads a thin video to
@@ -269,7 +269,7 @@ If none of these fit the video, use plain headings and prose. That's a valid not
 
 ---
 
-## Bold — what earns it, everywhere including Detailed Summary
+## Bold — what earns it, everywhere including Summary
 
 `**bold**` isn't just typography here — once the note goes through a real
 renderer (this skill's own `render.py`, or `md_to_book.py` / any Obsidian-style
@@ -288,12 +288,12 @@ little important:
    bolding turns a page into a rainbow wall instead of drawing the eye to what
    actually matters.
 
-**This applies exactly as much to `## Detailed Summary` bullets as to body
+**This applies exactly as much to `## Summary` bullets as to body
 paragraphs.** A bullet compressing several body sentences into one line still
 carries whatever was load-bearing in them — a bullet with zero bold in a note
 whose body bolds generously is a sign something got flattened, not simplified.
 Check this explicitly in the Honesty-check pass (METHOD §5): skim the whole
-Detailed Summary section alone — every bullet should have its own 1–3 bold
+Summary section alone — every bullet should have its own 1–3 bold
 spans on its own key numbers, terms, or outcomes, not just the first bullet or
 two.
 
@@ -304,7 +304,7 @@ two.
 These show the *range*. Your note's shape (below the Quick Summary + Detailed
 Summary) comes from your video, not from here. Every shell still opens, right
 after the metadata block, with the fixed Quick Summary callout and
-`## Detailed Summary` — and every shell, not shown below for brevity, still
+`## Summary` — and every shell, not shown below for brevity, still
 ends with the fixed Ending Deep-Dive Layer from FIXED §7
 (`## What I Actually Learned` → `## Interview Q&A` → conditional
 Code/Mind-Map/Formulas → `## Quick Revision`).
@@ -315,7 +315,7 @@ Code/Mind-Map/Formulas → `## Quick Revision`).
 <metadata block>
 > [!abstract] Quick Summary
 > <2-4 plain-prose lines: what this video is, what it covers>
-## Detailed Summary
+## Summary
 - <point>
 
 - <point>
@@ -332,7 +332,7 @@ Code/Mind-Map/Formulas → `## Quick Revision`).
 <metadata block>
 > [!abstract] Quick Summary
 > <2-4 plain-prose lines>
-## Detailed Summary
+## Summary
 - …
 ## <what's being argued and by whom>
 ## <Position A> — <name it as the speaker frames it>
@@ -347,7 +347,7 @@ Code/Mind-Map/Formulas → `## Quick Revision`).
 <metadata block>
 > [!abstract] Quick Summary
 > <2-4 plain-prose lines>
-## Detailed Summary
+## Summary
 - …
 ## <what gets built / done, and the starting point assumed>
 ## Setup / what you need
@@ -362,7 +362,7 @@ Code/Mind-Map/Formulas → `## Quick Revision`).
 <metadata block>
 > [!abstract] Quick Summary
 > <2-4 plain-prose lines>
-## Detailed Summary
+## Summary
 - …
 ## <the one thing this video explains>
 ## <sub-concept 1, grouped by relationship>

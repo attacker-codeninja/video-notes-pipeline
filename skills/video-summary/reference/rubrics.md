@@ -102,9 +102,9 @@ view…").
 
 Re-read your generated notes against `state.py select` output and check:
 - Coverage — every meaningful node (P0–P3) is represented somewhere in the notes, and
-  the `## Detailed Summary` bullets (near the top) miss nothing meaningful that the
+  the `## Summary` bullets (near the top) miss nothing meaningful that the
   detailed sections below go on to cover.
-- Summary format — `## Detailed Summary` is a bulleted list with one blank line between
+- Summary format — `## Summary` is a bulleted list with one blank line between
   consecutive bullets, and **every bullet carries its own 1–3 bold spans** on
   its load-bearing numbers/terms/outcomes (`templates.md` → "Bold —
   what earns it") — not just the first bullet or two while the rest go flat.
