@@ -41,8 +41,12 @@ install where all skills sit side by side under `.claude/skills/`.
 All optional except the source URL, bare positional/flag words, any order:
 
 - `source` (required): a single video URL, or a playlist/channel URL
-- `--count N|all` (default `1`): how many **not-yet-processed** videos to do
-  this run, for a playlist/channel source. Ignored for a single-video source.
+- `--count N|all` (default: `1` for a single-video source; **`all` for a
+  playlist/channel source** when `--count` isn't given): how many
+  **not-yet-processed** videos to do this run. A bare channel/playlist link
+  with no `--count` means "process everything still outstanding on this
+  channel/playlist, one by one" -- not just one video. `--count` is ignored
+  entirely for a single-video source (always exactly that one video).
 - `--format md|html` (default `md`): note format. There is no `terminal`
   option here -- the whole point of this skill is a saved file, not chat
   output (use `/video-summary` directly for a terminal read).
@@ -68,12 +72,18 @@ python3 "${SKILL_DIR}/scripts/flow.py" list "<source>" \
 
 Prints TAB-separated `id<TAB>title<TAB>url` lines, one per video still to do,
 already in the right order, with already-done videos (per the log in `--out`)
-already filtered out unless `--force` was given. If a playlist/channel
-resolves to **more than 3** videos to process in this run, show the user the
-count and titles and confirm before proceeding (mirrors `/video-summary`'s own
-batch-confirmation rule) -- this is a real yt-dlp/whisper/token cost. If the
-output is empty, tell the user everything requested is already processed and
-stop (no working directory needed).
+already filtered out unless `--force` was given. For a channel/playlist
+source with no explicit `--count`, pass `--count all` here so the full
+remaining backlog resolves in one go, not just the next video.
+
+If this resolves to **more than 3** videos to process in this run, show the
+user the count and titles and confirm before proceeding (mirrors
+`/video-summary`'s own batch-confirmation rule) -- this is a real
+yt-dlp/whisper/token cost. Once confirmed, proceed through the **entire**
+resolved list in Step 3 without stopping or re-asking between videos -- a
+channel/playlist run means working through every video in that list before
+the task counts as done. If the output is empty, tell the user everything
+requested is already processed and stop (no working directory needed).
 
 ## Step 2 -- create the scratch working directory (once for the whole run)
 
