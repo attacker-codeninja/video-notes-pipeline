@@ -111,6 +111,10 @@ Re-read your generated notes against `state.py select` output and check:
 - Ending Deep-Dive Layer — `## What I Actually Learned`, `## Interview Q&A`, and
   `## Quick Revision` are present (conditional `## Code Walkthrough`/`## Mind Map`/
   `## Formulas` only where earned), in that fixed order, at the very end of the note.
+  `## Interview Q&A` is exhaustive — one question per meaningful node (concept,
+  command, claim, number, gotcha), not a handful of headline questions; if
+  `## Code Walkthrough` is present, every code block/command is explained
+  line-by-line or flag-by-flag, never left as code + proof with no walkthrough.
 - Accuracy — every concrete claim maps to a node; nothing invented; no node contradicted.
 - Faithfulness — opinions stay opinions; scopes/qualifications intact.
 - Uncertainty — hedged/unresolved things are still hedged/open in the notes.

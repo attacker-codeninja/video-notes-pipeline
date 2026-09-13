@@ -99,17 +99,34 @@ about *content* — content is fixed upstream.
       example. Multiple callouts, multiple sub-sections — this is the
       deepest part of the note, not a summary of one.
    b. **`## Interview Q&A`** — the same knowledge, drilled as recall practice.
-      Grouped into topic sub-sections (`###`), each Q&A pair as its own
-      `[!question] <the question>` callout followed by a full, detailed
+      **Exhaustive, never a sample.** Go through the frozen knowledge and
+      generate a genuine interview question for every concept, command,
+      claim, number, gotcha, and distinction it contains — not just the 4-5
+      headline ones. A dense technical video should produce a long Q&A
+      section (15-30+ pairs is normal for a demo-heavy video); a short
+      single-idea video produces fewer, but never artificially capped and
+      never padded with near-duplicate rephrasings of the same question
+      either. Grouped into topic sub-sections (`###`), each Q&A pair as its
+      own `[!question] <the question>` callout followed by a full, detailed
       answer (not one line) — as if answering out loud in an interview.
       Questions come only from what the video actually covered; never invent
       knowledge the video didn't give you to answer a question you posed.
+      Before moving on, check: could someone study *only* this section and
+      be able to speak confidently on everything the video taught? If a
+      concept/command/number from the body has no matching question here,
+      add one.
    c. **`## Code Walkthrough`** — **only if the video actually shows/dictates
       code, commands, or config.** Skip this heading entirely otherwise (no
-      empty section). Real code blocks with language tags, each one backed by
-      **proof** — an `[!example]` callout right under it citing what the video
-      actually showed as the result (the on-screen output, the frame
-      evidence) so the code isn't asserted, it's demonstrated.
+      empty section). Every distinct code block or command gets three parts,
+      in order: (1) the code itself, in a fenced block with a language tag;
+      (2) a **plain-English, line-by-line or flag-by-flag explanation** right
+      under it — what each part does and why, written for someone who's
+      never seen this syntax before (same zero-assumed-knowledge rule as
+      ROLE) — never just the code with no walkthrough; (3) an `[!example]`
+      **proof** callout citing what the video actually showed as the result
+      (the on-screen output, the frame evidence) so the code isn't asserted,
+      it's demonstrated. Goal: a reader could type this themselves and
+      understand what every line/flag accomplishes, not just copy-paste it.
    d. **`## Mind Map`** — **only if the video's concepts/relationships are
       rich enough to earn one** (skip for a simple single-idea video). One
       **consolidated** Mermaid diagram of the *whole* video's structure — not
@@ -213,7 +230,9 @@ headings for the output.
    first use. Weave in uncertainty where relevant. Keep creator opinions
    marked as opinions. **Finally, write the fixed Ending Deep-Dive Layer**
    (FIXED §7): `## What I Actually Learned` (your own synthesis, top-student
-   voice), `## Interview Q&A`, `## Code Walkthrough`/`## Mind Map`/
+   voice), `## Interview Q&A` (exhaustive — every concept/command/claim/number
+   gets its own question, not a sample of headline ones), `## Code Walkthrough`
+   (every command explained line-by-line, not just shown) / `## Mind Map` /
    `## Formulas` (each only if earned), and `## Quick Revision` last, always.
 
 5. **Honesty-check** — Second pass over your draft: every concrete claim traces to
@@ -225,11 +244,16 @@ headings for the output.
    with no bold while its neighbors have plenty means something got flattened
    on the way in. Also check the Ending Deep-Dive Layer specifically:
    `## What I Actually Learned` isn't just the Summary reworded (it
-   should read as synthesis, not paraphrase); every `## Interview Q&A` answer
-   is fully detailed, not a one-liner; conditional sections (Code/Mind
-   Map/Formulas) are present only where earned and cleanly absent otherwise;
-   `## Quick Revision` is genuinely terse (no elaboration sneaking back in).
-   Fix and re-check. (This is the `rubrics.md §8` validation — it checks
+   should read as synthesis, not paraphrase); `## Interview Q&A` is
+   **exhaustive** — walk the frozen knowledge node by node and confirm every
+   concept/command/claim/number has a question covering it, not just a
+   handful of headline ones — and every answer is fully detailed, not a
+   one-liner; `## Code Walkthrough`, if present, explains **every** code
+   block/command line-by-line or flag-by-flag (not just code + proof with no
+   walkthrough) — conditional sections (Code/Mind Map/Formulas) are present
+   only where earned and cleanly absent otherwise; `## Quick Revision` is
+   genuinely terse (no elaboration sneaking back in). Fix and re-check. (This
+   is the `rubrics.md §8` validation — it checks
    fidelity to Canonical Knowledge, not truth-vs-reality.)
 
 ---
