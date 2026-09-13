@@ -84,7 +84,7 @@ Consumes a `video-perceive` output folder and produces the actual deliverable: a
 
 The rule this skill never breaks: understand the whole video first, freeze that understanding into a reconciled knowledge structure, then write the note from the frozen structure. It never writes and reasons at the same time, which is what stops a summary from quietly drifting away from what the video actually said.
 
-Every note opens with a Quick Summary callout and a complete bulleted `## Summary` right after the metadata, so you get the gist in five seconds and the whole thing in one scroll, then the full detailed write-up follows below, shaped by the video's own structure: numbered lessons, a debate's two sides, a tutorial's steps, whatever the video itself does.
+Every note opens with a Quick Summary callout and a complete bulleted `## Detailed Summary` right after the metadata, so you get the gist in five seconds and the whole thing in one scroll, then the full detailed write-up follows below, shaped by the video's own structure: numbered lessons, a debate's two sides, a tutorial's steps, whatever the video itself does. The note always closes with a fixed Ending Deep-Dive Layer too: `## What I Actually Learned` (a top-student's own-words synthesis, not a reworded summary), `## Interview Q&A` (topic-grouped recall questions with full answers), `## Code Walkthrough` / `## Mind Map` / `## Formulas` when the video actually earns them, and a terse `## Quick Revision` callout at the very end.
 
 ### obsidian-md-formatter (presentation syntax)
 

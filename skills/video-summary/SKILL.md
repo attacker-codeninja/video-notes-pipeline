@@ -1,6 +1,6 @@
 ---
 name: video-summary
-description: Deeply understand a video from its already-produced video-perceive (Layer 1) output folder, build a reconciled Canonical Knowledge representation of it, then write it up once — as a self-learner's own study notes in clear English, with headings and structure taken from the video itself. The note opens with a quick-orientation callout and a complete bulleted summary right after the metadata, then the full detailed write-up follows below. One output, no modes: the full meaningful knowledge of the video, always. This is NOT a transcript shortener: it understands the video first, freezes that understanding, then writes from it. Consumes Layer 1 evidence (transcript.json, frames.json, MANIFEST.txt, frames/); never re-downloads or re-transcribes. Auto-detects the _layer1 folder in the current directory when no path is given, and handles a folder holding one video or many (processed one by one). Use when the user points at (or is inside) a _layer1 folder and wants a summary / notes / overview.
+description: Deeply understand a video from its already-produced video-perceive (Layer 1) output folder, build a reconciled Canonical Knowledge representation of it, then write it up once — as a self-learner's own study notes in clear English, with headings and structure taken from the video itself. The note opens with a quick-orientation callout and a complete bulleted Detailed Summary right after the metadata, then the full detailed write-up, then a fixed closing Ending Deep-Dive Layer (a top-student's-own-words deep dive, Interview Q&A, conditional Code Walkthrough/Mind Map/Formulas, and a final Quick Revision callout). One output, no modes: the full meaningful knowledge of the video, always. This is NOT a transcript shortener: it understands the video first, freezes that understanding, then writes from it. Consumes Layer 1 evidence (transcript.json, frames.json, MANIFEST.txt, frames/); never re-downloads or re-transcribes. Auto-detects the _layer1 folder in the current directory when no path is given, and handles a folder holding one video or many (processed one by one). Use when the user points at (or is inside) a _layer1 folder and wants a summary / notes / overview.
 argument-hint: "[folder] [terminal|md|html]"
 allowed-tools: Bash, Read, Write, AskUserQuestion
 user-invocable: true
@@ -240,18 +240,26 @@ of truth** — presentation reads from it and must not re-interpret the video.
    two fixed things in this order:**
    - a `> [!abstract] Quick Summary` callout — 2-4 plain-prose lines giving instant
      orientation (what the video is, what it covers);
-   - a `## Summary` section — the complete bulleted list covering every meaningful
-     point in the note, one blank line between consecutive bullets.
+   - a `## Detailed Summary` section — the complete bulleted list covering every
+     meaningful point in the note, one blank line between consecutive bullets.
 
    Only after both does the video's own detailed write-up begin (same full depth as
-   always, just positioned below instead of at the end).
+   always, just positioned below instead of at the end). **After that write-up, a
+   fixed Ending Deep-Dive Layer always closes the note** (full spec in
+   `reference/templates.md`, FIXED §7): `## What I Actually Learned` (your own
+   top-student-voice synthesis, not a reworded summary), `## Interview Q&A`
+   (topic-grouped `[!question]` callouts with full answers), `## Code Walkthrough` /
+   `## Mind Map` / `## Formulas` (each only when the video actually earns it —
+   skip cleanly otherwise), and `## Quick Revision` last (one terse
+   `[!abstract]` callout, always present).
    Save to `NOTE_DIR/NOTE_STEM.md` (e.g. `2026-08-26_why-hes-hunted-for-a-year-without-
    finding-a-valid-bug.md`) — **not** into `WORK`, and never inside `_layer1`.
 3. **Validate** against the `select` output (`rubrics.md §8`): coverage (every meaningful
-   node represented, and the Summary near the top misses nothing), accuracy (every concrete
-   claim maps to a node, nothing invented), faithfulness (opinions stay opinions, scopes
-   intact), uncertainty preserved, clear and correct English throughout. Fix any failing
-   section and re-check.
+   node represented, and the Detailed Summary near the top misses nothing), accuracy
+   (every concrete claim maps to a node, nothing invented), faithfulness (opinions stay
+   opinions, scopes intact), uncertainty preserved, clear and correct English throughout,
+   and the Ending Deep-Dive Layer present and correctly ordered (conditional pieces
+   skipped only when genuinely not earned). Fix any failing section and re-check.
 4. Deliver in the chosen format:
    - `terminal` (default): **do not call any script.** Put the note you just wrote
      (`NOTE_DIR/NOTE_STEM.md`) straight into your chat reply, YAML frontmatter and all. A
@@ -276,11 +284,14 @@ video, `title_guess`/`name`). In `md`/`html` mode, each video gets its own `NOTE
   this video" prompt** — one frozen understanding, written up once in full.
 - **No modes, no depth dial.** Always the complete meaningful knowledge. The note's
   length comes from the video, never from a setting.
-- **Not a fixed-template filler.** No section skeleton. The note is shaped like a real
-  self-learner's own notes — structure and heading names come from the video, re-decided
-  each run. Only fixed: YAML frontmatter, the metadata block, English prose, faithfulness,
-  and the Quick Summary callout + `## Summary` (complete bulleted list, one blank line
-  between bullets) placed right after the metadata, before the detailed sections.
+- **Not a fixed-template filler.** No section skeleton for the *body*. The note is shaped
+  like a real self-learner's own notes — structure and heading names in the body come from
+  the video, re-decided each run. Fixed regardless of video: YAML frontmatter, the metadata
+  block, English prose, faithfulness, the Quick Summary callout + `## Detailed Summary`
+  placed right after the metadata, and the six-part Ending Deep-Dive Layer
+  (`## What I Actually Learned` → `## Interview Q&A` → conditional
+  `## Code Walkthrough`/`## Mind Map`/`## Formulas` → `## Quick Revision`) that always
+  closes the note — see `reference/templates.md` FIXED §7 for the full spec.
 - **Clear, plain English** — whatever language the video is in, the notes are written in
   English throughout; any term the learner wouldn't already know gets explained inline on
   first use.
