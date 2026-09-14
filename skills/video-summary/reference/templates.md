@@ -59,6 +59,19 @@ about *content* — content is fixed upstream.
 4. **No filler** — no "in this video we'll learn…", no meta-commentary about
    the note itself, no restating the same point twice, no closing recap that just
    repeats the body.
+4b. **The note is about the video, never about the note-writing process.**
+   Zero self-reference: no "I previously wrote", no "that was wrong", no
+   `[!warning] Correction` callouts, no mentioning a prior draft/version, no
+   frame-counts or "read N frames", no "on-screen confirmed" / "the frame
+   showed" evidentiary narration, no reflection on your own accuracy or
+   process. If something needs revising mid-write, just revise it — the
+   reader never sees that a correction happened, only the correct fact,
+   stated once, like it was always known. This applies everywhere, including
+   the Ending Deep-Dive Layer — `## What I Actually Learned` is about what the
+   *video* teaches, never about your own extraction process or what you got
+   wrong. The single narrow exception: the video's own internal
+   contradictions (creator says X, on-screen shows Y) are real content and
+   may be noted — but only about the video, never phrased as your mistake.
 5. **No transcript dumping.** You're writing understanding, not a cleaned-up
    transcript.
 6. **Right after the metadata block, two fixed things come first, in this order,
@@ -237,8 +250,11 @@ headings for the output.
 
 5. **Honesty-check** — Second pass over your draft: every concrete claim traces to
    a node; nothing invented; no opinion hardened into fact; scopes/qualifications
-   intact; hedged things still hedged; open threads still open; clear, correct
-   English throughout — no leftover jargon left unexplained; **every
+   intact; hedged things still hedged; open threads still open; **zero
+   self-reference** — scan for "I previously wrote"/"that was wrong"/
+   `[!warning] Correction`/frame-counts/any narration of your own process, and
+   delete on sight, replacing with the plain corrected fact (see FIXED §4b);
+   clear, correct English throughout — no leftover jargon left unexplained; **every
    `## Summary` bullet carries its own 1–3 bold spans** on the numbers/
    terms/outcomes that make it (see "Bold — what earns it" below) — a bullet
    with no bold while its neighbors have plenty means something got flattened

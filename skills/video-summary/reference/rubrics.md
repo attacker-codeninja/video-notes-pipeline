@@ -154,6 +154,12 @@ Re-read your generated notes against `state.py select` output and check:
 - Accuracy — every concrete claim maps to a node; nothing invented; no node contradicted.
 - Faithfulness — opinions stay opinions; scopes/qualifications intact.
 - Uncertainty — hedged/unresolved things are still hedged/open in the notes.
+- Zero self-reference — scan the whole note for any trace of the note-writing
+  process itself: "I previously wrote", "that was wrong", `[!warning]
+  Correction` callouts, frame-counts ("read N frames"), mentions of a prior
+  draft, or any reflection on your own accuracy. The note is 100% about the
+  video's content; it never narrates its own production. Fix by simply
+  stating the correct fact once, with no trace of what it replaced.
 Fail on any → fix that section and re-check. **Bounded scope:** this checks fidelity to
 Canonical Knowledge, NOT truth-vs-reality (that blind spot is why `evidence` timestamps
 are kept — so a human can spot-check the source).
