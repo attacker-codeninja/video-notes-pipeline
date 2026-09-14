@@ -16,6 +16,15 @@ repetition, or chit-chat, and it does not become a node.
   capture the new part.
 - Compress information, never meaning. `A → causes → B → enables → C` must survive as a
   chain, never flatten to "A, B, C are related".
+- **100% complete knowledge is mandatory, zero compromise.** Every distinct meaningful
+  detail — every number, every named step, every command/flag, every minor qualification,
+  every aside that changes understanding even slightly — gets its own node or its own
+  evidence entry on an existing node. Never fold two genuinely distinct details into one
+  vague node just because they're related or because there are "a lot of them" — that is
+  the failure mode this rule exists to stop. When in doubt about whether something is
+  "meaningful enough," the default is to keep it as its own node at P2/P3, not to merge
+  it away. Priority (§3) controls how much room something gets in the write-up; it never
+  controls whether the detail survives extraction at all.
 
 ## 2. Triangulation (Layer 1 already gives you 3 sources — use them)
 
@@ -39,10 +48,18 @@ Rules:
   exact wording unclear"). Never assert a guessed value as fact.
 - Every source silent on a detail → leave it out entirely. A gap is not a licence to fill.
 
-Frame-reading is **selective, not all-318**: read frames (a) at part boundaries for
-orientation, (b) at any `flag`ged segment carrying a concrete claim, (c) where on-screen
-text plausibly carries knowledge (code, slides, terminal, diagrams). That is the cost of
-accuracy; sampling "representative" frames when a specific claim needs checking is not OK.
+**Frame-reading is exhaustive, not selective — read every frame in the part, every
+time.** This is a hard requirement, not a cost-saving heuristic: 100% complete knowledge
+means the visual channel is fully used, not sampled. Do not skip a frame because its
+segment isn't flagged, because it "looks like" a talking-head shot, or to save turns —
+a frame with no apparent claim can still carry a slide, a diagram, an on-screen detail,
+or a correction the transcript never says out loud. Read them all, in order, before
+writing that part's delta. If a part has more frames than comfortably fit in one
+tool-call batch, read them in batches across multiple turns rather than skipping any —
+the part is not "done" for freeze/merge purposes until every one of its frames has
+actually been read. Cost and turn-count are not a reason to sample; if reading is
+taking long, that's expected for a thorough video — checkpoint progress (see
+`state.py`'s per-part resume) and continue, never shortcut coverage to finish faster.
 
 ## 3. Importance priority (P0–P3) — set on each node at understanding time
 
@@ -94,9 +111,15 @@ view…").
 
 - Transcript gap / all sources silent → smaller/omitted node + coverage note; no guess.
 - Low-confidence unresolved → node with `uncertainty: uncertain`.
-- State getting large on a long video → compress STABLE nodes (merge overlapping,
-  shorten `meaning`) but keep every P0 intact, all distinctions, causal chains,
-  qualifications, contradictions, pending threads. Archived ≠ deleted.
+- **A long/dense video is never a reason to extract less.** State getting large means
+  more nodes, not fewer — that is the correct outcome of a dense video, not a problem to
+  solve by merging. "Compress STABLE nodes" (merge truly-identical overlapping ones,
+  shorten `meaning` wording) is a **write-time-only wording economy** on nodes that are
+  genuinely the same fact restated — it is never a licence to drop a node or fold two
+  distinct details together during extraction. Keep every P0 intact, all distinctions,
+  causal chains, qualifications, contradictions, pending threads, and every P2/P3 detail
+  too — priority changes how much space something gets in the final write-up (§3), never
+  whether it exists as a node. Archived ≠ deleted.
 
 ## 8. Summary validation (after generation, before showing)
 

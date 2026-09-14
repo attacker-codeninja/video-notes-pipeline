@@ -172,13 +172,20 @@ For each part index `N` not already done:
 
 2. **Understand — triangulate, don't transcribe** (`rubrics.md §2`): trust content where
    source A (`text`) and source B (`indep_text`) agree; for any `flag: true` segment
-   carrying a concrete claim (number, name, command, URL, term), `Read` the frame(s) at
-   that timestamp (`part_evidence.frames[].abs`) and let on-screen text decide. If nothing
-   resolves it, record `uncertainty` — don't guess. Read frames selectively (boundaries,
-   flagged claims, slides/code), not all of them. Extract only **meaningful** knowledge
-   (`rubrics.md §1`): concepts, claims (with type + source — opinion stays opinion),
-   evidence refs, relationships, examples, processes, pending threads, uncertainty, visual
-   knowledge. Write English `meaning`/`statement`; set first-pass `priority` (`§3`).
+   carrying a concrete claim (number, name, command, URL, term), let on-screen text decide.
+   If nothing resolves it, record `uncertainty` — don't guess. **`Read` every frame in
+   `part_evidence.frames[].abs` for this part — all of them, not a selective sample.**
+   100% complete knowledge is mandatory: a frame with no flagged segment nearby can still
+   carry a slide, a diagram, or an on-screen detail the transcript never says out loud.
+   If a part has too many frames to read in one batch, read them across multiple batches
+   (or a follow-up turn) rather than skipping any — the part isn't done until every frame
+   in it has been read. Extract **every meaningful detail** (`rubrics.md §1`), not just the
+   headline ones: concepts, claims (with type + source — opinion stays opinion), evidence
+   refs, relationships, examples, processes, pending threads, uncertainty, visual
+   knowledge — every distinct number/step/command/qualification gets its own node or
+   evidence entry, never folded into a vaguer one to save space. Write English
+   `meaning`/`statement`; set first-pass `priority` (`§3`) — priority controls how much
+   room something gets in the write-up, never whether it survives extraction.
 
 3. **Emit the delta and merge:**
    ```bash
@@ -303,9 +310,16 @@ video, `title_guess`/`name`). In `md`/`html` mode, each video gets its own `NOTE
   this skill's job.
 
 ## Notes
-- Long videos: length changes strategy (more parts), never the completeness standard. Keep
-  every P0 through compression; archived ≠ deleted.
-- Frame reading is selective and purpose-driven (boundaries, flagged concrete claims,
-  slides/code) — as many as accuracy needs, not a fixed sample.
+- Long videos: length changes strategy (more parts, more turns), never the completeness
+  standard. 100% complete knowledge is mandatory regardless of length — keep every P0
+  through P3 node, through compression; archived ≠ deleted. A longer/denser video taking
+  more turns to process is expected and correct; it is never a reason to sample less.
+- **Frame reading is exhaustive — every frame in every part, every run.** Not a sample,
+  not "as many as accuracy needs" — all of them. If a part's frame count doesn't fit one
+  batch, spread the reading across batches or turns; the part is not done until every
+  frame in it has been read. See `rubrics.md §2`.
 - All intermediates live under each video's `layer2-temp` (sibling to `_layer1`, never
-  inside it) so runs are resumable and re-rendering in another FORMAT is cheap.
+  inside it) so runs are resumable and re-rendering in another FORMAT is cheap. Use this
+  resumability freely — if a video's thoroughness needs more turns than fit comfortably
+  in one, stop cleanly at a part boundary and continue next turn from `progress.json`
+  rather than rushing or sampling to finish early.
