@@ -14,9 +14,14 @@ repetition, or chit-chat, and it does not become a node.
 - The SAME point said twice → one node; keep the most informative wording as `meaning`.
 - Repetition that ADDS something new (a new condition, a better example) → NOT redundant;
   capture the new part.
-- Compress information, never meaning. `A → causes → B → enables → C` must survive as a
-  chain, never flatten to "A, B, C are related".
-- **100% complete knowledge is mandatory, zero compromise.** Every distinct meaningful
+- Never flatten a chain into a vaguer relation. `A → causes → B → enables → C` must
+  survive exactly as that chain, never reworded down to "A, B, C are related" — that's
+  not tighter wording, it's a lost fact (the causal link itself).
+- **NO COMPRESSION, EVER — this is an absolute rule, not a guideline.** Compression of
+  any kind, at any stage (extraction, reconcile, or write-time), is knowledge
+  truncation, full stop — there is no such thing as "safe" or "wording-only"
+  compression here. 100% complete knowledge is mandatory, zero compromise. Every
+  distinct meaningful
   detail — every number, every named step, every command/flag, every minor qualification,
   every aside that changes understanding even slightly — gets its own node or its own
   evidence entry on an existing node. Never fold two genuinely distinct details into one
@@ -75,9 +80,11 @@ by one tier automatically — so a concept many things depend on rises even if y
 marked it P1.
 
 Priority is **not** a presentation filter. There is one output and it carries **all
-meaningful nodes** (P0–P3). `priority_effective` only guides the write-up: P0 leads and
-gets room, P3 gets a line — nothing meaningful is dropped. On a very long video, priority
-still governs *compression* (see §7): low-priority stable nodes get shortened, never cut.
+meaningful nodes** (P0–P3), in full, regardless of video length — nothing meaningful is
+ever dropped or shortened away. `priority_effective` only guides *emphasis* in the
+write-up: P0 leads and gets the most room, P3 still gets its own full line — never
+zero lines, never a vaguer merged line. See §7: there is no compression path, at any
+video length.
 
 ## 4. Concept identity — merge / split (never by name alone)
 
@@ -111,15 +118,21 @@ view…").
 
 - Transcript gap / all sources silent → smaller/omitted node + coverage note; no guess.
 - Low-confidence unresolved → node with `uncertainty: uncertain`.
-- **A long/dense video is never a reason to extract less.** State getting large means
-  more nodes, not fewer — that is the correct outcome of a dense video, not a problem to
-  solve by merging. "Compress STABLE nodes" (merge truly-identical overlapping ones,
-  shorten `meaning` wording) is a **write-time-only wording economy** on nodes that are
-  genuinely the same fact restated — it is never a licence to drop a node or fold two
-  distinct details together during extraction. Keep every P0 intact, all distinctions,
-  causal chains, qualifications, contradictions, pending threads, and every P2/P3 detail
-  too — priority changes how much space something gets in the final write-up (§3), never
-  whether it exists as a node. Archived ≠ deleted.
+- **A long/dense video is never a reason to extract less. There is no compression
+  path — none, at any video length, at any stage.** State getting large on a long
+  video means more nodes, more parts, more turns — that is the correct, expected
+  outcome of a dense video, never a problem to solve by shortening or merging.
+  The *only* operation that ever removes two nodes down to one is **`merge` in
+  reconcile (§4)** — and that is exclusively for accidental duplicates, i.e. the
+  same fact was captured twice under two different ids because of how parts were
+  processed. It requires the meaning AND the evidence to be identical; two nodes
+  that are merely related, similar, or about the same topic are two nodes,
+  forever. Keep every P0 through P3 node intact, every distinction, every causal
+  chain, every qualification, every contradiction, every pending thread, at full
+  fidelity, regardless of how large the video or the resulting canonical store
+  gets. Priority (§3) changes how much emphasis something gets in the final
+  write-up; it never changes whether it exists as a node or how much of its
+  detail survives into the note. Archived ≠ deleted.
 
 ## 8. Summary validation (after generation, before showing)
 

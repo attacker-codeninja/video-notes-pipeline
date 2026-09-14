@@ -73,7 +73,7 @@ about *content* — content is fixed upstream.
      line between consecutive bullets.** `## Summary` is a fixed
      heading name — every heading below it, up to the Ending Deep-Dive Layer
      (item 7), is yours. **The bold rule further down applies exactly as much
-     to these bullets as to the body** — a bullet compressing three body
+     to these bullets as to the body** — a bullet summarizing three body
      sentences still needs the load-bearing bold those sentences had. This is
      not the "plain" section — it's the two-layer gist (quick prose, then
      complete bullets) before the full detail begins.
@@ -313,7 +313,7 @@ little important:
    actually matters.
 
 **This applies exactly as much to `## Summary` bullets as to body
-paragraphs.** A bullet compressing several body sentences into one line still
+paragraphs.** A bullet summarizing several body sentences into one line still
 carries whatever was load-bearing in them — a bullet with zero bold in a note
 whose body bolds generously is a sign something got flattened, not simplified.
 Check this explicitly in the Honesty-check pass (METHOD §5): skim the whole

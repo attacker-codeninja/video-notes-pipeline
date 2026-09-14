@@ -311,9 +311,10 @@ video, `title_guess`/`name`). In `md`/`html` mode, each video gets its own `NOTE
 
 ## Notes
 - Long videos: length changes strategy (more parts, more turns), never the completeness
-  standard. 100% complete knowledge is mandatory regardless of length — keep every P0
-  through P3 node, through compression; archived ≠ deleted. A longer/denser video taking
-  more turns to process is expected and correct; it is never a reason to sample less.
+  standard. **There is no compression path, at any video length.** 100% complete
+  knowledge is mandatory — keep every P0 through P3 node, at full fidelity; archived ≠
+  deleted. A longer/denser video taking more turns and producing more nodes is expected
+  and correct; it is never a reason to sample less or shorten what's captured.
 - **Frame reading is exhaustive — every frame in every part, every run.** Not a sample,
   not "as many as accuracy needs" — all of them. If a part's frame count doesn't fit one
   batch, spread the reading across batches or turns; the part is not done until every
