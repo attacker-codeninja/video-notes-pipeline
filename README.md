@@ -165,3 +165,11 @@ Pick whichever of these actually fits your machine and habits. None of them is "
 ## License
 
 `video-perceive` is marked MIT in its own frontmatter. Apply whatever license you'd like to the rest of the repo.
+
+## Changelog
+
+### 2026-09-14
+
+- **Exhaustive frame-reading, zero-compromise extraction.** Frame-reading is no longer selective (boundaries, flagged segments, likely slides/code). Every frame in every part of a video is now read, full stop. Long videos take more turns, not fewer frames read.
+- **All compression removed.** No compression of any kind survives extraction, at any video length. The only operation that ever reduces two nodes to one is a `merge` for genuine accidental duplicates during reconciliation. Priority controls emphasis in the final note, never whether something gets captured at all.
+- **No self-reference to the note-writing process.** Notes are strictly about the video's own content. "I previously wrote X, that was wrong" narration, prior-draft mentions, and "the frame showed" / "on-screen confirmed" evidentiary language no longer appear in notes. A real contradiction inside the video itself (creator says X, screen shows Y) is still legitimate content, framed as the video's own discrepancy, never as the note's mistake.
